@@ -10,6 +10,7 @@ namespace task1
     {
         static void Main(string[] args)
         {
+           
             //задание 1
             Console.WriteLine("Задание 1. Ввести с консоли 2 числа. Вывести их сумму на конcоль");
             Console.WriteLine("Введите первое число");
@@ -38,22 +39,19 @@ namespace task1
             Console.WriteLine(n); //выводим 
                          
             Console.ReadLine(); //типо пауза
+           
 
-
+          
             //задание 3
             Console.WriteLine("Задание 3");
             Console.WriteLine("Ввести с консоли число. Обнулить последний бит этого числа. Вывести на консоль");
-
-          // не сделал. может завтра
-            
-
-            //int m = Convert.ToInt32(i); //преобразуем переменную в int
-            
-            //m = a >> aa; //сдвигаем;
-            //int ccc = a & 1; //
-            //Console.WriteLine(a); //выводим
-
-
+            Console.WriteLine("Введите число");
+            String str_l = Console.ReadLine();
+            int l = Convert.ToInt32(str_l);
+            l = l >> 1;
+            l = l << 1;
+            Console.WriteLine("Ответ");
+            Console.WriteLine(l);
 
         }
     }
