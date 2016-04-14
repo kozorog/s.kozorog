@@ -10,7 +10,7 @@ namespace task1
     {
         static void Main(string[] args)
         {
-           
+           //
             //задание 1
             Console.WriteLine("Задание 1. Ввести с консоли 2 числа. Вывести их сумму на конcоль");
             Console.WriteLine("Введите первое число");
