@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace task1
+namespace lesson2_hometask1
 {
     class Program
     {
@@ -19,7 +19,7 @@ namespace task1
             Console.WriteLine("Введите число А ");
             int A = Convert.ToInt32(Console.ReadLine());
 
-         
+
             Random rand = new Random();
             Int32[] mass = new Int32[N];
 
@@ -28,35 +28,29 @@ namespace task1
                 mass[i] = rand.Next(10); //ограничился 100000 
             }
 
-            
-            //Вывод на консоль 
-            Console.WriteLine("Массив");
 
-            for (int i = 0; i < mass.Length; i++)
-            {
-                Console.WriteLine(mass[i]);
-            }
-
-
-
-
+            bool printYes = false;
 
             foreach (int ii in mass)
             {
-                
-                                if (ii  == A)
+
+                if (ii == A)
                 {
-
-                    Console.WriteLine("iiiiiiiiiiiiiiiiiiiiii"+ii);
-                    Console.WriteLine("YES");
-                    break;
+                    printYes = true;
                     
+                    break;
                 }
-
-               // Console.WriteLine("NO");
+                             
             }
 
-
+            if (printYes)
+            {
+                Console.WriteLine("Yes");
+            }
+            else
+            {
+                Console.WriteLine("No");
+            }
 
         }
     }
