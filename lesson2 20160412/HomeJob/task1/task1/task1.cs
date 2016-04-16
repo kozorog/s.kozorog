@@ -52,14 +52,8 @@ namespace task1
                     break;
                     
                 }
-                else
-                {
-                    //Console.WriteLine("NO");
-                    continue;
-                    
-                }
-                            
-            
+
+                Console.WriteLine("NO");
             }
 
 
