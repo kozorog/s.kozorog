@@ -10,6 +10,9 @@ namespace task3
     {
         static void Main(string[] args)
         {
+
+            //Заполнить с консоли массив из N элементов. Отсортировать. Вывести результат. N - задается с консоли
+            Console.WriteLine("Введите размер массива N ");
             string str_n = Console.ReadLine();
             int n = Convert.ToInt32(str_n);
             int[] mass = new int[n];
@@ -17,6 +20,7 @@ namespace task3
             for (int i = 0; i < n; i++)
 
             {
+                Console.WriteLine("Введите число " + i + " элемента массива");
                 string str_t = Console.ReadLine();
                 int t = Convert.ToInt32(str_t);
                 mass[i] = t;
@@ -28,11 +32,10 @@ namespace task3
             for (int i = 0; i < n; i++)
 
             {
-               string srt_t = Convert.ToString(mass)
+                Console.WriteLine(mass[i]);
             }
-
-            Console.WriteLine(mass.ToString());
-            //  Console.WriteLine(sum);
+                        
+            
 
         }
     }

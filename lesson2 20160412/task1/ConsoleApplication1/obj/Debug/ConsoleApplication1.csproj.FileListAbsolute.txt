@@ -1,0 +1,6 @@
+D:\kozorog\education\lesson2 20160412\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\kozorog\education\lesson2 20160412\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\kozorog\education\lesson2 20160412\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\kozorog\education\lesson2 20160412\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+D:\kozorog\education\lesson2 20160412\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\kozorog\education\lesson2 20160412\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

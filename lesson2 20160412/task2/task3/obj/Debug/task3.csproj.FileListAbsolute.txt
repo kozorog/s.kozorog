@@ -1,0 +1,7 @@
+D:\kozorog\education\lesson2 20160412\task3\task3\bin\Debug\task3.exe.config
+D:\kozorog\education\lesson2 20160412\task2\task3\bin\Debug\task3.exe.config
+D:\kozorog\education\lesson2 20160412\task2\task3\bin\Debug\task3.exe
+D:\kozorog\education\lesson2 20160412\task2\task3\bin\Debug\task3.pdb
+D:\kozorog\education\lesson2 20160412\task2\task3\obj\Debug\task3.csprojResolveAssemblyReference.cache
+D:\kozorog\education\lesson2 20160412\task2\task3\obj\Debug\task3.exe
+D:\kozorog\education\lesson2 20160412\task2\task3\obj\Debug\task3.pdb
