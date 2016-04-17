@@ -19,47 +19,34 @@ namespace task4
 
             Int32[,] matr1 = new Int32[N, N];
             Int32[,] matr2 = new Int32[N, N];
-            for (int i=0;i < N;i++)
+            for (int i = 0; i < N; i++)
             {
                 for (int j = 0; j < N; j++)
                 {
                     matr1[i, j] = rand.Next(1000); //ограничился 1000 
                     matr2[i, j] = rand.Next(1000); //ограничился 1000 
-
                 }
-                
             }
-
             //Вывод на консоль
             Console.WriteLine("Матрица1");
-
-
-            for (int i = 0; i < N; i++,Console.WriteLine (""))
-            {for (int j = 0; j < N; j++)
-
-                //{ Console.Write(matr1[i, j] +"\t") ;
-                {
-                    Console.Write(matr1[i, j] + "\t");
-
-                }
-            }
-
-
-
-            Console.WriteLine("");
-            Console.WriteLine("Матрица2");
-
 
             for (int i = 0; i < N; i++, Console.WriteLine(""))
             {
                 for (int j = 0; j < N; j++)
                 {
-                    Console.Write(matr2[i, j]  +"\t");
+                    Console.Write(matr1[i, j] + "\t");
 
                 }
             }
-
-
+            Console.WriteLine("");
+            Console.WriteLine("Матрица2");
+            for (int i = 0; i < N; i++, Console.WriteLine(""))
+            {
+                for (int j = 0; j < N; j++)
+                {
+                    Console.Write(matr2[i, j] + "\t");
+                }
+            }
 
             //сложение массивов 
 
@@ -76,19 +63,13 @@ namespace task4
             Console.WriteLine(""); // вывод на консоль итоговой матрицы
             Console.WriteLine("Результат сложения двух массивов");
 
-
             for (int i = 0; i < N; i++, Console.WriteLine(""))
             {
                 for (int j = 0; j < N; j++)
                 {
                     Console.Write(SumMatr[i, j] + "\t");
-
                 }
             }
-
-
-
-
         }
 
     }

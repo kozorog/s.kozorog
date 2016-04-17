@@ -29,6 +29,7 @@ namespace task3
             Array.Sort(mass);
 
 
+            Console.WriteLine("Осортированный массив: ");
             for (int i = 0; i < n; i++)
 
             {
