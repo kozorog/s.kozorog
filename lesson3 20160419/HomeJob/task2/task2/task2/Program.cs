@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace task1
+namespace task2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //Считать строку с консоли. Создать словарь, где ключом будет символ строки, 
-            //а значением - количество данных символов в считанной строке.
+            //Считывать с консоли числа, пока не будет введено число “-1”, среди введенных чисел вывести все дублирующиеся.
+
             Console.WriteLine("Введите строку с консоли");
             string valueString = Console.ReadLine();
             char[] ar = valueString.ToCharArray();
@@ -35,11 +35,12 @@ namespace task1
             }
 
             //вывод словаря на экран
-            Console.WriteLine("Полученный словарь:");
+
             foreach (KeyValuePair<char, int> pair in dict)
             {
                 Console.WriteLine("Key: {0}  Value {1}", pair.Key, pair.Value);
             }
+
         }
     }
 }
