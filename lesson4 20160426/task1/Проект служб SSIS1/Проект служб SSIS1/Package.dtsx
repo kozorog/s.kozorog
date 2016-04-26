@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/26/2016 5:44:09 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="UK-RND-62"
+  DTS:CreatorName="2GIS\s.kozorog"
+  DTS:DTSID="{320095D4-E92D-4DD7-9780-301357D8E9BD}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.1400.361"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionGUID="{83414C5A-8B72-485D-B60F-75215801CC7E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables />
+</DTS:Executable>

@@ -12,8 +12,12 @@ namespace task2
         {
             //Считывать с консоли числа, пока не будет введено число “-1”, среди введенных чисел вывести все дублирующиеся.
 
-            Console.WriteLine("Введите строку с консоли");
+            Console.WriteLine("Введите числа с консоли");
+            bool key;
+            while (key) ;
             string valueString = Console.ReadLine();
+            if key=
+
             char[] ar = valueString.ToCharArray();
             int LengthString = ar.Length;
 

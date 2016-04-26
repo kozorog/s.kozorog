@@ -15,24 +15,34 @@ namespace task1
             Console.WriteLine("Введите строку с консоли");
             string valueString = Console.ReadLine();
             char[] ar = valueString.ToCharArray();
-            int LengthString = ar.Length;
-
-            Console.WriteLine("Вы ввели: {0} Длинной:{1}", valueString, LengthString);
-
+            int lengthString = ar.Length;
+            Console.WriteLine("Вы ввели строку:{0} длинной: {1} ", valueString, lengthString);
             Dictionary<char, int> dict = new Dictionary<char, int>();
 
+            //Реализовать без методов-расширений типа Count
+            /*
             foreach (var i in ar)
             {
-
+                if (!dict.ContainsKey(i))
                 {
-                    if (!dict.ContainsKey(i))
-                    {
-                        dict.Add(i, valueString.Count(x => x == i));
-                    }
+                    dict.Add(i, valueString.Count(x => x == i));
                 }
-
-
             }
+            */
+
+            //Надо реализовать без методов-расширений типа Count
+            //Реализовал :-)
+
+            for (int i = 0; i < lengthString; i++)
+                if (!dict.ContainsKey(valueString[i]))
+                {
+                    int count = 0;
+                    for (int j = i; j < lengthString; j++)
+                    {
+                        if (valueString[i] == valueString[j]) count++;
+                    }
+                    dict.Add(valueString[i], count);
+                }
 
             //вывод словаря на экран
             Console.WriteLine("Полученный словарь:");
