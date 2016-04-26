@@ -17,7 +17,7 @@ namespace task1
             char[] ar = valueString.ToCharArray();
             int lengthString = ar.Length;
             Console.WriteLine("Вы ввели строку:{0} длинной: {1} ", valueString, lengthString);
-            Dictionary<char, int> dict = new Dictionary<char, int>();
+            Dictionary<char, int> resultDictionary = new Dictionary<char, int>();
 
             //Реализовать без методов-расширений типа Count
             /*
@@ -34,19 +34,19 @@ namespace task1
             //Реализовал :-)
 
             for (int i = 0; i < lengthString; i++)
-                if (!dict.ContainsKey(valueString[i]))
+                if (!resultDictionary.ContainsKey(valueString[i]))
                 {
                     int count = 0;
                     for (int j = i; j < lengthString; j++)
                     {
                         if (valueString[i] == valueString[j]) count++;
                     }
-                    dict.Add(valueString[i], count);
+                    resultDictionary.Add(valueString[i], count);
                 }
 
             //вывод словаря на экран
             Console.WriteLine("Полученный словарь:");
-            foreach (KeyValuePair<char, int> pair in dict)
+            foreach (KeyValuePair<char, int> pair in resultDictionary)
             {
                 Console.WriteLine("Key: {0}  Value {1}", pair.Key, pair.Value);
             }
