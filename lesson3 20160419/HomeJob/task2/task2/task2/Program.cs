@@ -12,38 +12,71 @@ namespace task2
         {
             //Считывать с консоли числа, пока не будет введено число “-1”, среди введенных чисел вывести все дублирующиеся.
 
-            Console.WriteLine("Введите числа с консоли");
-            bool key;
-            while (key) ;
-            string valueString = Console.ReadLine();
-            if key=
+            //--------------
+            float num;
+            List<float> numbers = new List<float>();
+            bool flag = true;
+            while (flag)
 
-            char[] ar = valueString.ToCharArray();
-            int LengthString = ar.Length;
-
-            Console.WriteLine("Вы ввели: {0} Длинной:{1}", valueString, LengthString);
-
-            Dictionary<char, int> dict = new Dictionary<char, int>();
-
-            foreach (var i in ar)
             {
 
+                Console.WriteLine("Введите число:");
+                string x1 = Console.ReadLine();
+
+                if (!float.TryParse(x1, out num)) //проверка введенных символово на вшивость
                 {
-                    if (!dict.ContainsKey(i))
+                    Console.WriteLine("Введен символ вместо числа, повторите попытку");
+                }
+                else
+                {
+
+                    if (num == -1) //проверка на  -1
                     {
-                        dict.Add(i, valueString.Count(x => x == i));
+                        flag = false;
+                    }
+                    else
+                    {
+                        numbers.Add(num);
                     }
                 }
 
-
             }
 
-            //вывод словаря на экран
-
-            foreach (KeyValuePair<char, int> pair in dict)
+            Dictionary<float, int> dic = new Dictionary<float, int>();
+            for (int i = 0; i < numbers.Count; i++)
             {
-                Console.WriteLine("Key: {0}  Value {1}", pair.Key, pair.Value);
+                if (dic.ContainsKey(numbers[i]))
+                {
+                    dic[numbers[i]] = ++dic[numbers[i]];
+                }
+                else
+                    dic.Add(numbers[i], 1);
             }
+
+            //вывод списка на экран
+            Console.WriteLine("Полученный на входе лист:");
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                Console.WriteLine("Key: {0}", numbers[i]);
+            }
+
+
+            //вывод списка на экран
+
+            Console.WriteLine("Cписок дублей :");
+            foreach (KeyValuePair<float, int> kvp in dic)
+
+                if (kvp.Value > 1)
+                {
+                    Console.WriteLine("Номер {0} имеет {1} повторений (в т.ч. дублей)", kvp.Key, kvp.Value);
+                }
+            //  else
+            // {
+            //   Console.WriteLine("Нет дублей");
+            // }
+
+
+
 
         }
     }
