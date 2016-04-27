@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace task1
+namespace task2
 {
     class PhoneNumber
     {
@@ -23,12 +23,13 @@ namespace task1
          
         } 
                 
-    //конструктор
+    //конструктор1
     public PhoneNumber(string code, string phone)
     {
         _code = code;
         _phone = phone;
     }
+        //конструктор2
         public PhoneNumber(string phone) : this (null,phone)
         {
            

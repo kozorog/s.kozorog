@@ -17,7 +17,7 @@ namespace task1
             
 
             PhoneNumber p = new PhoneNumber("", "999999");
-            Console.WriteLine($"Полный номер телефона {p.GetNumber()}");
+            Console.WriteLine($"Полный номер телефона {p.WriteNumber()}");
 
 
         }

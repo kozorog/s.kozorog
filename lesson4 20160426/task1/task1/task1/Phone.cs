@@ -12,7 +12,7 @@ namespace task1
         private string _code;
         private string _phone;
 
-        public string GetNumber()
+        public string WriteNumber()
         {
             if (_code == null || _code =="")
             {
