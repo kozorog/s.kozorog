@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace task2
+//Преобразовать класс “Телефон” на работу со свойствами
 {
     class PhoneNumber
     {
@@ -12,27 +13,34 @@ namespace task2
         private string _code;
         private string _phone;
 
-        public string GetNumber()
+        public string GetNumber // свойство
         {
-            if (_code == null || _code =="")
+            get { return _phone;}
+        }
+        public string GetCode // свойство
+        {
+            get { return _code; }
+            set
             {
-                return _phone;
-            }
-            else
-                return "("+_code+")" + _phone;
-         
-        } 
-                
-    //конструктор1
-    public PhoneNumber(string code, string phone)
-    {
-        _code = code;
-        _phone = phone;
-    }
-        //конструктор2
-        public PhoneNumber(string phone) : this (null,phone)
+                if (value == null || value == "")
+                    return;
+                _code = value;            }
+
+        }
+        
+
+
+
+        //конструктор1
+        public PhoneNumber(string code, string phone)
         {
-           
+            _code = code;
+            _phone = phone;
+        }
+        //конструктор2
+        public PhoneNumber(string phone) : this(null, phone)
+        {
+
         }
 
     }

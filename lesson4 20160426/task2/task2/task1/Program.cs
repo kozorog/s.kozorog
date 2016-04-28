@@ -15,7 +15,7 @@ namespace task2
 
 
             PhoneNumber p = new PhoneNumber("999", "999999");
-            Console.WriteLine($"Полный номер телефона {p.GetNumber()}");
+            Console.WriteLine($"Полный номер телефона {p.GetCode} {p.GetNumber}  ");
 
 
         }
