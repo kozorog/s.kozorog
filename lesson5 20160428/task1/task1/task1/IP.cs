@@ -6,16 +6,21 @@ using System.Threading.Tasks;
 
 namespace task1
 {
-    class IP : Client
+    class IpClient : Client
     {
-        private string _fio;
-        private DateTime _birth;
+        public string Fio;
+        public DateTime Birth;
 
-
-        public IP(string fio, DateTime birth)
+        //конструктор
+        public IpClient(string fio, DateTime birth, int id, string phone, float summa) : base(id, phone, summa)
         {
-            _fio = fio;
-            _birth = birth;
+            Fio = fio;
+            Birth = birth;
+        }
+
+        public override string GetInfo()
+        {
+            return string.Format("ИП {0}. Сумма заказа: {1}.", Fio, Summa);
         }
 
     }

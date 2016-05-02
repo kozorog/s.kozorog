@@ -6,19 +6,23 @@ using System.Threading.Tasks;
 
 namespace task1
 {
-    class OOO :Client
+    class OooClient : Client
 
     {
-        private string _name;
-        private string _schet;
-
-        public OOO(string name, string schet)
+        public string Name;
+        public string BankAccount;
+        //конструктор
+        public OooClient(string name, string bankAccount, int id, string phone, float summa) : base(id, phone, summa)
         {
-            _name = name;
-            _schet= schet;
-            
+            Name = name;
+            BankAccount = bankAccount;
+
         }
 
+        public override string GetInfo()
+        {
+            return string.Format("ООО {0}. Сумма заказа: {1}.", Name, Summa);
+        }
 
     }
 }

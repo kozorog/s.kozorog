@@ -16,7 +16,7 @@ namespace task1
             //*если код города отсутствует.
             
 
-            PhoneNumber p = new PhoneNumber("", "999999");
+            PhoneNumber p = new PhoneNumber("125", "999999");
             Console.WriteLine($"Полный номер телефона {p.WriteNumber()}");
 
 

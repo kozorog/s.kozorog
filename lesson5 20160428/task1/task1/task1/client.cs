@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace task1
 {
-   public class Client
+    public class Client
     {
-        //static void Main(string[] args)
+        public int Id;
+        public string Phone;
+        public float Summa;
 
-        private int _ident;
-        private string _phone;
-        private float _summa;
-
-        //firm OOO = new OOO("Roga", "1234rrr");
-
-        public Client(int ident, string phone, float summa)
-            {
-            _ident = ident;
-            _phone = phone;
-            _summa = summa;
-            }
-        
+        //конструктор
+        public Client(int id, string phone, float summa)
+        {
+            Id = id;
+            Phone = phone;
+            Summa = summa;
+        }
 
 
+        public virtual string GetInfo()
+        {
+            return "";
+        }
 
     }
 }
