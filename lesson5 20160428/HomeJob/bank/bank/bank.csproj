@@ -43,13 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BankAccount.cs" />
     <Compile Include="CalculatedAccount.cs" />
     <Compile Include="DepersonalizedMetalAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SavingsAccount.cs" />
     <Compile Include="SberAccount.cs" />
+    <Compile Include="SettlementAccount.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

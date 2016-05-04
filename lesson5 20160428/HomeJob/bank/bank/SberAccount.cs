@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace bank
 {
-    class SberAccount : BankAccounts
+    //сберегательный - возможность пополнения и изъятия денег со счета
+
+    class SberAccount
     {
-        public SberAccount 
+        float sumOperation;
+
+
     }
 }
