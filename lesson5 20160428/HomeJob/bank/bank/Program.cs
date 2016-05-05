@@ -10,6 +10,17 @@ namespace bank
     {
         static void Main(string[] args)
         {
+            //ввод данных. 
+
+            List<SettlementAccount> clients = new List<SettlementAccount>();
+            //создаем кучу объектов
+            IpClient ip = new IpClient("Petya", new DateTime(1979, 11, 15), 23, "123456", 999);
+            clients.Add(ip);
+
+
+            
+
+
 
         }
     }

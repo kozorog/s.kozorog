@@ -8,9 +8,9 @@ namespace bank
 {
     //сберегательный - возможность пополнения и изъятия денег со счета
 
-    class SberAccount
+    class SberAccount 
     {
-        float sumOperation;
+        
 
 
     }

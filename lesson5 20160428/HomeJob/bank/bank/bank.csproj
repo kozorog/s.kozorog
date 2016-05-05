@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalculatedAccount.cs" />
+    <Compile Include="BankAccount.cs" />
     <Compile Include="DepersonalizedMetalAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
