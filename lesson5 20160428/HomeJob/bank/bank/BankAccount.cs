@@ -6,63 +6,62 @@ using System.Threading.Tasks;
 
 namespace bank
 {
-    class BankAccount//SettlementAccount
+    public abstract class BankAccount
     {
-        int NumberAccount;
-        string OwnerAccount;
-        float CurrentSum;
-       
-       // float SumOperation;
-        bool StatusAccount;
+        protected int Number;
+        protected string Owner;
+        protected Decimal CurrentSum;
+        protected bool IsAccountClosed;
+        public BankAccount(int number, string owner)
 
-         
-        
-        //создаем конструктор
-        public SettlementAccount(int numberAccount, string ownerAccount, float currentSum, float percentOfDeposit, float sumOperation, bool statusAccount)
-            {
-            NumberAccount = numberAccount;
-            OwnerAccount = ownerAccount;
-            CurrentSum = currentSum;
-         //   PercentOfDeposit = percentOfDeposit;
-          //  SumOperation = sumOperation;
-          //  StatusAccount = statusAccount;
-
-
-            }
-
-        public void AddSum(float sumOperation) //пополнение счета  сбер накоп расчетный
         {
-            CurrentSum += SumOperation;
-            
-
+            Number = number;
+            Owner = owner;
+            CurrentSum = 0;
+            IsAccountClosed = false;
         }
 
-
-        public void Withdraw(float sumOperation) //изъятие со счета
-        {
-            if (sumOperation > CurrentSum)
-            {
-                //return;
-                Console.WriteLine("Недостаточно денег на счете");
-            }
-
-            CurrentSum -= SumOperation;
+        //метод добавления денег на счет
+        public abstract void AddSum(decimal sumOperation); //пополнение счета  сбер накоп расчетный
 
 
-        }
+        //метод изъятия денег
+
+        public abstract void Withdraw(decimal sumOperation); //изъятие со счета
+
 
         //Реализовать метод закрытия счета. С закрытым счетом нельзя проводить никакие операции. 
         //Счет не может быть закрыт, если он имеет положительный баланс.
 
-        public void СlosedAccount(bool statusAccount) //закрытие счета True = закрыт: False = открыт
+
+
+        public void СloseAccount()
         {
+            if (IsAccountClosed)
+            {
+                throw new Exception("Операции с закрытым счетом невозможны...");
+            }
             if (CurrentSum > 0)
             {
-                Console.WriteLine("Счет не может быть закрыт, т.к. он имеет положительный баланс");
+
+                throw new Exception("Невозможно закрыть счет, т.к на нем больше нуля денег...");
             }
-            StatusAccount = false;
+
+            IsAccountClosed = true;
+
+
+
 
         }
+        public virtual string GetInfo()
+        {
+            return "";
+        }
+
+
 
     }
+
+
+
 }

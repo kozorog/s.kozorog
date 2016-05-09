@@ -10,14 +10,12 @@ namespace bank
     {
         static void Main(string[] args)
         {
-            //ввод данных. 
-
-            List<SettlementAccount> clients = new List<SettlementAccount>();
-            //создаем кучу объектов
-            IpClient ip = new IpClient("Petya", new DateTime(1979, 11, 15), 23, "123456", 999);
-            clients.Add(ip);
-
-
+            SberAccount sberAccount = new SberAccount(1,"Вася");
+            sberAccount.AddSum(100); //добавление 
+            sberAccount.Withdraw(99); //изъятие
+            sberAccount.Withdraw(1); // еще изъятие
+            sberAccount.СloseAccount();
+            Console.WriteLine(sberAccount.GetInfo()); //вывод инфы на экран
             
 
 
@@ -25,3 +23,4 @@ namespace bank
         }
     }
 }
+    
