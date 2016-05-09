@@ -20,11 +20,11 @@ namespace bank
         {
             if (IsAccountClosed)
             {
-                throw new ArgumentException("Счет закрыт. Операция невозможна...");
+                throw new Exception("Счет закрыт. Операция невозможна...");
             }
               if (sumOperation <= 0)
             {
-                throw new ArgumentException("Вносимая сумма должна быть положительной и больше нуля...");
+                throw new ArgumentException("Вносимая сумма должна быть больше нуля...");
             }
             CurrentSum += sumOperation; 
                         
@@ -35,11 +35,11 @@ namespace bank
         {
             if (sumOperation <= 0)
             {
-                throw new ArgumentException("Cумма изъятия должна быть положительной и больше нуля...");
+                throw new ArgumentException("Cумма изъятия должна быть больше нуля...");
             }
             if (IsAccountClosed)
             {
-                throw new ArgumentException("Счет закрыт. Операция невозможна...");
+                throw new Exception("Счет закрыт. Операция невозможна...");
             }
             if (sumOperation > CurrentSum)
             {

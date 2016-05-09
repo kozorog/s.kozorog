@@ -44,7 +44,7 @@ namespace bank
             if (CurrentSum > 0)
             {
 
-                throw new Exception("Невозможно закрыть счет, т.к на нем больше нуля денег...");
+                throw new Exception("Невозможно закрыть счет, т.к на нем есть деньги...");
             }
 
             IsAccountClosed = true;
@@ -57,11 +57,5 @@ namespace bank
         {
             return "";
         }
-
-
-
     }
-
-
-
 }
