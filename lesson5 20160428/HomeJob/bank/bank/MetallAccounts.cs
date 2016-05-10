@@ -14,15 +14,15 @@ namespace bank
     {
 
         public decimal WeightMetall; // вес металла
-        public string TypeMetall;
+        //public string TypeMetall;
+        Metalls metallType;
 
-        public MetallAccounts(int number, string owner, decimal weightMetall, string typeMetall) : base(number, owner)
+        public MetallAccounts(int number, string owner, Metalls typeMetall) : base(number, owner)
         {
-            WeightMetall = weightMetall;
-            TypeMetall = typeMetall;
+            metallType = typeMetall;
         }
 
-        public override void AddSum(decimal weightMetall)
+        public override void AddAsset(decimal weightMetall)
         {
             if (IsAccountClosed)
             {
@@ -33,8 +33,8 @@ namespace bank
                 throw new ArgumentException("Масса вносимого металла должна быть больше нуля...");
             }
 
-            CurrentSum += weightMetall*(MetallPriceList.GetValue(Metalls.Gold));
-            //Console.WriteLine(MetallPriceList.GetValue(Metalls.Gold));
+            CurrentSum += weightMetall*(MetallPriceList.GetValue(metallType));
+            
 
         }
 
@@ -53,7 +53,7 @@ namespace bank
             {
                 throw new ArgumentException("Масса изымаемого металла в пересчете на сумму должна быть не больше чем остаток...");
             }
-            CurrentSum -= weightMetall * (MetallPriceList.GetValue(Metalls.Gold));
+            CurrentSum -= weightMetall * (MetallPriceList.GetValue(metallType));
 
         }
 
@@ -61,8 +61,8 @@ namespace bank
 
         public override string GetInfo()
         {
-            return string.Format("Номер счета {0}. Тип металла {1}. Текущая сумма на счете: {2}. Статус счета {3}.",
-                Number, Metalls.Gold, CurrentSum, IsAccountClosed);
+            return string.Format("Номер счета {0}. Тип металла {1}. Курс металла {2}. Текущая сумма на счете: {3}. Статус счета {4}.",
+                Number, metallType, MetallPriceList.GetValue(metallType), CurrentSum, IsAccountClosed);
         }
 
 

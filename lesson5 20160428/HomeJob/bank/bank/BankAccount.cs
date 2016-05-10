@@ -22,7 +22,7 @@ namespace bank
         }
 
         //метод добавления денег на счет
-        public abstract void AddSum(decimal sumOperation); //пополнение счета  сбер накоп расчетный
+        public abstract void AddAsset(decimal sumOperation); //пополнение счета  сбер накоп расчетный
 
 
         //метод изъятия денег

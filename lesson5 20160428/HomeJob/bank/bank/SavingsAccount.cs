@@ -30,7 +30,7 @@ namespace bank
 
         }
 
-        public override void AddSum(decimal sumOperation)
+        public override void AddAsset(decimal sumOperation)
         {
             if (IsAccountClosed)
             {
