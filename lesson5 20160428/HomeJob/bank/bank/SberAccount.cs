@@ -12,19 +12,7 @@ namespace bank
         public SberAccount(int number, string owner) : base(number, owner)
         {
         }
-
-        public override void AddAsset(decimal sumOperation)
-        {
-            base.AddAsset(sumOperation);
-        }
-
-        public override void Withdraw(decimal sumOperation)
-        {
-            base.Withdraw(sumOperation);
-        }
-
-
-
+        
         public override string GetInfo()
         {
             return string.Format("Номер счета {0}. Владелец: {1}. Текущая сумма на счете: {2}. Статус счета {3}.", Number, Owner, CurrentSum, IsAccountClosed);

@@ -24,16 +24,6 @@ namespace bank
             PayOfService = payOfService;
         }
 
-        public override void AddAsset(decimal sumOperation)
-        {
-            base.AddAsset(sumOperation);
-        }
-
-        public override void Withdraw(decimal sumOperation)
-        {
-            base.Withdraw(sumOperation);
-        }
-
         public override string GetInfo()
         {
             return string.Format("Номер счета {0}. Владелец: {1}.  Текущая сумма на счете: {2}. Снято за обслуживание {3}. Статус счета {4}.", Number, Owner, CurrentSum, PayOfService, IsAccountClosed);

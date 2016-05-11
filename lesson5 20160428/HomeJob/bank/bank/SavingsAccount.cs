@@ -23,16 +23,7 @@ namespace bank
             PercentOfDeposit = percentOfDeposit;
         }
 
-        public override void AddAsset(decimal sumOperation)
-        {
-            base.AddAsset(sumOperation);
-        }
-
-        public override void Withdraw(decimal sumOperation)
-        {
-            base.Withdraw(sumOperation);
-        }
-
+        
         public override string GetInfo()
         {
             return string.Format("Номер счета {0}. Владелец: {1}. Текущая сумма на счете: {2}. Ставка по вкладу {3}. Проценты за месяц: {4}. Статус счета {5}.", Number, Owner, CurrentSum, PercentOfDeposit, Capitalisation, IsAccountClosed);

@@ -6,25 +6,11 @@ using System.Threading.Tasks;
 
 namespace task1
 {
-    public abstract class BankClient
+    class BankClient 
     {
-        public int Account;
-        public decimal Summ;
-        public bool IsAccountClosed;
-
-        public BankClient(int account, decimal summ)
+        public BankClient(int Number, decimal SumAccount, bool StatusClient, bool StatusAccount)
+          
         {
-            Account = account;
-            Summ = summ;
-            IsAccountClosed = false;
-         }
-        //метод добавления денег на счет
-        public abstract void AddAsset(decimal sumOperation); //пополнение счета  сбер накоп расчетный
-
-
-        //метод изъятия денег
-
-        public abstract void Withdraw(decimal sumOperation); //изъятие со счета
-
+        }
     }
 }
