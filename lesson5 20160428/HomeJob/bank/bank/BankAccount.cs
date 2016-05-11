@@ -13,26 +13,45 @@ namespace bank
         protected Decimal CurrentSum;
         protected bool IsAccountClosed;
         public BankAccount(int number, string owner)
-
         {
             Number = number;
             Owner = owner;
             CurrentSum = 0;
             IsAccountClosed = false;
         }
-
         //метод добавления денег на счет
-        public abstract void AddAsset(decimal sumOperation); //пополнение счета  сбер накоп расчетный
+        public virtual void AddAsset(decimal sumOperation) //пополнение счета  сбер накоп расчетный
+
+        {
+            if (IsAccountClosed)
+            {
+                throw new Exception("Счет закрыт. Операция невозможна...");
+            }
+            if (sumOperation <= 0)
+            {
+                throw new ArgumentException("Вносимая сумма должна быть больше нуля...");
+            }
+            CurrentSum += sumOperation;
+
+        }
 
 
-        //метод изъятия денег
-
-        public abstract void Withdraw(decimal sumOperation); //изъятие со счета
-
-
-        //Реализовать метод закрытия счета. С закрытым счетом нельзя проводить никакие операции. 
-        //Счет не может быть закрыт, если он имеет положительный баланс.
-
+        public virtual void Withdraw(decimal sumOperation)
+        {
+            if (sumOperation <= 0)
+            {
+                throw new ArgumentException("Cумма изъятия должна быть больше нуля...");
+            }
+            if (IsAccountClosed)
+            {
+                throw new Exception("Счет закрыт. Операция невозможна...");
+            }
+            if (sumOperation > CurrentSum)
+            {
+                throw new ArgumentException("Cумма изъятия должна быть не больше чем остаток...");
+            }
+            CurrentSum -= sumOperation;
+        }
 
 
         public void СloseAccount()
@@ -43,15 +62,9 @@ namespace bank
             }
             if (CurrentSum > 0)
             {
-
                 throw new Exception("Невозможно закрыть счет, т.к на нем есть деньги...");
             }
-
             IsAccountClosed = true;
-
-
-
-
         }
         public virtual string GetInfo()
         {
